@@ -37,7 +37,7 @@ public class Mensola {
 	public int setVolume(Libro libro, int posizione) {
 		if ((posizione<1) || (posizione > volumi.length))
 			return -1;  // posizione non valida
-		if (volumi[posizione] != null)
+		if (volumi[posizione-1] == null)
 			return -2;  // posizione occupata
 		volumi[posizione-1] = new Libro(libro);  // Inserimento libro in posizione
 		return posizione;
